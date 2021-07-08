@@ -28,6 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimer();
     setInterval(updateTimer, ONE_SECOND);
   }, Math.floor((seconds - Math.floor(seconds)) * 1000));
+
+  fetch("./assets/background.jpg")
+    .then((response) => response.blob())
+    .then((blob) => {
+      var reader = new FileReader();
+      reader.onload = function () {
+        document.querySelector(
+          "body"
+        ).style.backgroundImage = `url("${this.result}")`;
+      };
+      reader.readAsDataURL(blob);
+    });
 });
 
 function getTimerData() {

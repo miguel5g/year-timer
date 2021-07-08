@@ -13,11 +13,13 @@ body {
 
   min-height: 100vh;
 
-  background: #000 url("./assets/background.jpg") no-repeat;
+  background: #000 url("./assets/background-low.png") no-repeat;
   background-size: cover;
   background-position: center;
 
   color: #fff;
+
+  transition: background-image 2s;
 }
 
 main {
