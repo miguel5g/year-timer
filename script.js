@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function getTimerData() {
-  const timeLeft = new Date("2021", "11", "32").getTime() - Date.now();
+  const timeLeft = new Date("2022", "11", "32").getTime() - Date.now();
 
   const days = timeLeft / ONE_DAY;
   const hours = (timeLeft % ONE_DAY) / ONE_HOUR;
